@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro start",
-    "build": "astro build",
+    "build": "npx ts-node scratch.ts",
     "preview": "astro preview",
     "astro": "astro",
+    "prebuild": "npx ts-node utils/scripts/prebuild.ts",
     "postinstall": "astro telemetry disable",
-    "prepare": "node scripts/prepare.js",
+    "prepare": "npx ts-node utils/scripts/prepare.ts",
     "commitlint": "commitlint --edit"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^4.0.0",
     "@tailwindcss/typography": "^0.5.9",
+    "ajv": "^8.12.0",
     "astro": "^2.10.1",
     "autoprefixer": "^10.4.15",
     "cssnano": "^6.0.1",
@@ -29,6 +31,9 @@
     "@commitlint/config-conventional": "^17.6.7",
     "husky": "^8.0.3",
     "prettier": "^3.0.1",
-    "prettier-plugin-astro": "^0.11.0"
+    "prettier-plugin-astro": "^0.11.0",
+    "ts-json-schema-generator": "^1.3.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0"
   }
 }

@@ -1,3 +1,18 @@
 {
-  "extends": "astro/tsconfigs/base"
+  "extends": "astro/tsconfigs/strict",
+  "ts-node": {
+    "transpileOnly": true,
+    "require": ["tsconfig-paths/register"],
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "compilerOptions": {
+    "module": "ESNext",
+    "allowImportingTsExtensions": true,
+    "baseUrl": "./utils",
+    "paths": {
+      "@utils/*": ["*"]
+    }
+  }
 }

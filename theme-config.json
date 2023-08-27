@@ -1,1 +1,6 @@
-{}
+{
+  "global": {
+    "siteName": "My site",
+    "siteUrl": "https://my-site.dev"
+  }
+}
