@@ -10,9 +10,12 @@
   "compilerOptions": {
     "module": "ESNext",
     "allowImportingTsExtensions": true,
-    "baseUrl": "./utils",
+    "baseUrl": ".",
     "paths": {
-      "@utils/*": ["*"]
+      "@utils/*": ["utils/*"],
+      "@src/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"]
     }
   }
 }
